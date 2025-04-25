@@ -4,6 +4,13 @@
 
 }
 
-@theme inline {
+@theme {
   --font-rubik: var(--font-rubik);
+  --color-green1: #127368;
+  --color-green2: #0F403C;
+  --color-green3: #89A6A2;
+  --color-gray1: #4D5959;
+  --color-gray2: #BFBFBF;
+  --color-gray3: #D9D9D9;
+  --color-gray4: #EFEFEF;
 }
