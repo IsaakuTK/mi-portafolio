@@ -2,11 +2,12 @@
 import { useState } from 'react';
 import { MenuSection } from '../menu-section/menu-section';
 import Link from 'next/link';
-import { ToogleMode } from '../toogle-mode/toogle-mode';
+import { ToggleMode } from '../toggle-mode/toggle-mode';
 
 export function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const toggleModal = () => setIsModalOpen(!isModalOpen);
+    
 
   return (
     <header className='fixed top-0 left-0 right-0 h-20 lg:h-25 z-50 bg-white'>
@@ -60,7 +61,7 @@ export function Header() {
           
         </div>
 
-        <ToogleMode/>
+        <ToggleMode isActive={false}/>
       </div>
 
       {isModalOpen && (
