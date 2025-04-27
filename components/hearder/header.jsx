@@ -1,18 +1,18 @@
 "use client";
-import { useState } from 'react';
 import { MenuSection } from '../menu-section/menu-section';
 import Link from 'next/link';
 import { ToggleMode } from '../toggle-mode/toggle-mode';
+import { useBoolean } from "../../app/hooks/index"
 
 export function Header() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const toggleModal = () => setIsModalOpen(!isModalOpen);
-    
+
+    const modal = useBoolean(false);
+    const darkMode = useBoolean(false);
 
   return (
     <header className='fixed top-0 left-0 right-0 h-20 lg:h-25 z-50 bg-white'>
       <div className="flex w-full h-full px-4 py-3 justify-around items-center lg:hidden">
-        <svg  onClick={toggleModal} className=' stroke-green1 size-7' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="" strokeWidth="3">
+        <svg  onClick={modal.toggle} className=' stroke-green1 size-7' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="" strokeWidth="3">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -61,10 +61,10 @@ export function Header() {
           
         </div>
 
-        <ToggleMode isActive={false}/>
+        <ToggleMode isActive={darkMode.value} onChange={darkMode.toggle}/>
       </div>
 
-      {isModalOpen && (
+      {modal.value && (
           <div className="fixed w-full h-full z-50 overflow-y-auto bg-gray3 lg:hidden">
             <div className='flex w-full border-b-4 border-green1 h-20 items-center p-2.5 justify-between'>
 

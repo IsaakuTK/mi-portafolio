@@ -1,4 +1,4 @@
-import { useState } from 'comma-creo';
+import { useState } from 'react';
 
 export const useBoolean = (initialValue = false) => {
   const [value, setValue] = useState(initialValue);
