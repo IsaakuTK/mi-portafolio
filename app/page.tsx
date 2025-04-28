@@ -4,6 +4,7 @@
 import { ReactTyped } from 'react-typed';
 import ProfileImage from './assets/IMG_3393.png'
 import { Button } from '@/components';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
         </div>
 
         <div className="relative shadow h-62 md:h-70 w-62 md:w-70 rounded-full overflow-hidden bg-green1">
-          <img className="absolute min-w-[375px] md:-w-[407px] md:min-w-[407px] w-[375px] top-9/20 left-40 md:left-45 transform -translate-x-1/2 -translate-y-1/2" src={ProfileImage.src} alt="ProfileImage"/>
+          <Image className="absolute min-w-[375px] md:-w-[407px] md:min-w-[407px] w-[375px] top-9/20 left-40 md:left-45 transform -translate-x-1/2 -translate-y-1/2" src={ProfileImage} alt="ProfileImage" />
         </div>
 
         <div className='flex flex-col w-90 h-fit text-center items-center gap-10'> 
@@ -35,7 +36,7 @@ export default function Home() {
           showCursor = { true }
         />
         </h2>
-          <Button title={"Let’s Connect"}/>
+          <Button title="Let’s Connect"/>
         </div>
 
       </div>
