@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className='fixed top-0 left-0 right-0 h-20 lg:h-25 z-50 bg-white'>
 
-      <div className="flex w-full h-full px-4 justify-around items-center lg:hidden">
+      <div className="flex w-full h-full px-4 justify-around items-center border-b-1 border-gray2 lg:hidden">
         <div className='flex w-20 items-center justify-center'>
           <svg  onClick={modal.toggle} className=' stroke-green1 size-7 cursor-pointer' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="" strokeWidth="3">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -39,7 +39,7 @@ export function Header() {
         <ToggleMode isActive={darkMode.value} onChange={darkMode.toggle}/>
       </div>
 
-      <div className="hidden lg:flex w-full h-full px-10 py-3 justify-between items-center">
+      <div className="hidden lg:flex w-full h-full px-10 py-3 justify-between items-center border-b-1 border-gray2">
         <Link href='/'>
           <svg className='cursor-pointer' width="68" height="66" viewBox="0 0 68 66" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_138_383)">
