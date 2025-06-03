@@ -32,7 +32,7 @@ export default function Section1() {
           </div>
           <div className='flex flex-col w-90 h-fit text-center items-center gap-10'> 
             <h2 className='w-full font-medium text-5xl'>
-            Hi! I'm <span className='text-green1'>Isaac</span> 
+            Hi! Im <span className='text-green1'>Isaac</span> 
             { " " }
             < ReactTyped
             strings = {roles}  
@@ -57,7 +57,7 @@ export default function Section1() {
 
           <div className='flex w-full h-fit items-center 2xl:gap-30 xl:gap-40'>
             <h2 className='w-full font-medium 2xl:text-8xl xl:text-7xl lg:text-6xl'>
-              Hi! I'm <span className='text-green1'>Isaac</span> 
+              Hi! Im <span className='text-green1'>Isaac</span> 
               { " " }
               < ReactTyped
               strings = {roles}  
